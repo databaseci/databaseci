@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "databaseci"
+version = "6.0.2"
+authors = [ "Robert Lechte <rob@databaseci.com>",]
+license = "Fair Source License, version 0.9"
+readme = "README.md"
+description = "databaseci.com library"
+classifiers = [
+    "License :: Other/Proprietary License"
+]
+
+homepage = "https://databaseci.com"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4"
+migra = "*"
+click = "*"
+pyyaml = "*"
+py = "*"
+psycopg2-binary = "*"
+pendulum = "*"
+schemainspect = ">=3.1.1648463413"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+
+[tool.poetry.scripts]
+databaseci = 'databaseci:command.cli'
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+line_length = 88
+
+[build-system]
+requires = ["poetry-core>=1.0.8"]
+build-backend = "poetry.core.masonry.api"
